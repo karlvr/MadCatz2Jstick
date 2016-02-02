@@ -1,0 +1,6 @@
+[Unit]
+Description=MadCatz2Jstick
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/madcatz2jstick

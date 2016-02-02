@@ -1,0 +1,5 @@
+# Raspbian Jessie
+ACTION=="add", SUBSYSTEM=="input", ATTRS{idVendor}=="0738", ATTRS{idProduct}=="8818", TEST=="/bin/systemd", TAG+="systemd", ENV{SYSTEMD_WANTS}+="madcatz2jstick.service"
+
+# Raspbian Wheezy
+ACTION=="add", SUBSYSTEM=="input", ATTRS{idVendor}=="0738", ATTRS{idProduct}=="8818", TEST!="/bin/systemd", RUN+="/usr/local/bin/madcatz2jstick -d"
